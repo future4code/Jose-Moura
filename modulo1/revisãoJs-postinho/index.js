@@ -62,7 +62,12 @@ console.log(cadastro());
 
 const login = () => {
     const login = "labenu"
-	
+	const senha = prompt("Digite sua senha: ");
+	if(senha.toLowerCase() === login.toLowerCase()){
+		console.log("Usuario Logado");
+	}else{
+		console.log("Senha Inválida");
+	}
 }
 
 console.log(login());
@@ -70,13 +75,36 @@ console.log(login());
 // Exercício 5----------------------------------------------------------------------------------------------------
 
 const primeiraDose = () => {
+		nome = prompt("Digite seu nome: ");
+	vacina = prompt("Digite sua vacina: ");
 
-    //  Sua lógica aqui
+	let data = new Date('2021-10-19');
 
+	if(vacina === "Coronavac"){
+		data.setDate(data.getDate() + 28)
+	}else if(vacina === "Astrazenica"){
+		data.setDate(data.getDate() + 90)
+	}else if(vacina === "Pfizer"){
+		data.setDate(data.getDate() + 90)
+	}
+
+	let tempo = {
+		Coronavac: '28 dias',
+		Astrazenica: '90 dias',
+		Pfizer: '90 dias'
+	}
+
+	if(vacina === "Coronavac"){
+		console.log(`Olá ${nome}! A próxima dose da ${vacina} é daqui a ${tempo.Coronavac} dias. Compareça no posto na data ${data.toDateString()}.`)
+	}else if(vacina === "Astrazenica"){
+		console.log(`Olá ${nome}! A próxima dose da ${vacina} é daqui a ${tempo.Astrazenica} dias. Compareça no posto na data ${data.toDateString()}.`)
+	}else if(vacina === "Pfizer"){
+		console.log(`Olá ${nome}! A próxima dose da ${vacina} é daqui a ${tempo.Pfizer} dias. Compareça no posto na data ${data.toDateString()}.`)
+	}
 
 }
 console.log(primeiraDose())
-*/
+
 
 // LOOP+CONDICIONAL
 
@@ -143,7 +171,7 @@ const cadastro = () => {
 console.log(cadastro());
 
 const login = () => {
-    //  Sua lógica aqui
+    
 }
 console.log(login());
 
