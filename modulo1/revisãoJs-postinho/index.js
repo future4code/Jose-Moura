@@ -116,7 +116,18 @@ const segundaDose = (nomeDoUsuario) => {
         { nome: "Barbara", imunizacao: "incompleta" },
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
-
+	
+	function segundaDose(usuarios){
+  let nomeUsuario = usuarios.filter((item, index, array) => {
+	  if(item.imunizacao.includes("incompleta")){
+		  return true
+	  }
+  })
+let listaUsuario = nomeUsuario.map((item, index, array) =>{
+	return `nome:${item.nome}, imunizacao: completa`
+	});
+  
+  console.log(listaUsuario);
 }
 console.log(segundaDose("Barbara"));
 
@@ -129,7 +140,16 @@ const avisoAosAtrasados = () => {
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
 
-    //  Sua lógica aqui
+	function saberImunizacao(usuario){
+	let resumoUsuario = usuario.filter((item, index, array) => {
+		if(item.imunizacao.includes("incompleta")){
+			return true;
+		}
+	})
+	let listaIncompleta = resumoUsuario.map((item, index, array) =>{
+		return `Olá ${item.nome}! Sua imunização está ${item.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`
+	});
+	console.log(listaIncompleta);
 
 }
 console.log(avisoAosAtrasados());
