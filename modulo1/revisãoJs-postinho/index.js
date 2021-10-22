@@ -186,25 +186,84 @@ const usuarios = [
 ]
 
 const cadastro = () => {
-    //  Sua lógica aqui
+   let validacaoUsuarios = usuarios.filter((item, index, array) => {
+		if((2021 - item.ano > 18) && (item.senha.length >= 6) && (item.nacionalidade === "brasileira")){
+			return true
+		}
+	})
+	console.log(validacaoUsuarios);
 }
 console.log(cadastro());
 
 const login = () => {
-    
+    for(let i = 0; i < usuarios.length; i++){
+	if(usuarios[i].senha === "labenu"){
+		console.log(`O usuario ${usuarios[i].nome} está Logado`);
+	}else{
+		console.log(`${usuarios[i].nome}, sua senha está inválida`);
+	}
+}
 }
 console.log(login());
 
 const primeiraDose = () => {
-//  Sua lógica aqui
+	let vacina = prompt("Digite o nome da vacina");
+	let data = new Date('2021-10-19');
+	let tiposVacinas;
+	
+	// Ajuste da data de acordo com o dia da vacina
+	if(usuarios.vacina === vacina){
+		data.setDate(data.getDate() + 28)
+	}else if(usuarios.vacina === vacina){
+		data.setDate(data.getDate() + 90)
+	}else if(usuarios.vacina === vacina){
+		data.setDate(data.getDate() + 90)
+	}
+	
+	// Adicionando os dias da segunda dose de acordo com a vacina digitada pelo usuario.
+	if(vacina === "coronavac"){
+		tiposVacinas =  28;
+	}else if(vacina === "astrazenica"){
+		tiposVacinas =  90;
+	}else if(vacina === "pfizer"){
+		tiposVacinas =  90;
+	}
+	
+	let usuarioPrimeiraDose = usuarios.filter((item, index, array) => {
+		if(item.vacina === vacina){
+			return true;
+		}
+	})
+	let listaPrimeiraDose = usuarioPrimeiraDose.map((item, index, array) =>{
+		return `Olá ${item.nome}! A próxima dose da ${item.vacina} é daqui a ${tiposVacinas} dias. Compareça no posto na data ${data.toDateString()}.`
+	});
+
+	console.log(listaPrimeiraDose)
 }
 console.log(primeiraDose())
 const segundaDose = (nomeDoUsuario) => {
-    //  Sua lógica aqui
+    let nomeUsuario = usuarios.filter((item, index, array) => {
+	  if(item.nome === nomeDoUsuario){
+		  return true
+	  }
+  })
+	let listaUsuario = nomeUsuario.map((item, index, array) =>{
+		return `nome:${item.nome}, imunizacao: completa`
+		});
+  
+  console.log(listaUsuario);
 }
 console.log(segundaDose("ALGUM NOME AQUI"));
 
 const avisoAosAtrasados = () => {
-    //  Sua lógica aqui
+    	let resumoUsuario = usuarios.filter((item, index, array) => {
+		if(item.imunizacao.includes("incompleta")){
+			return true;
+		}
+	})
+	let listaIncompleta = resumoUsuario.map((item, index, array) =>{
+		return `Olá ${item.nome}! Sua imunização está ${item.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`
+	});
+	console.log(listaIncompleta);
 }
 console.log(avisoAosAtrasados());
