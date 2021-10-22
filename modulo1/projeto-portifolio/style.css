@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 622px;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== CABECALHO ===== */
+header {
+  width: 20%;
+  background-color: #f8f8ff;
+  box-shadow: inset 1px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+header > img {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  width: 150px;
+  align-items: center;
+
+  border-radius: 50%;
+}
+
+header > ol > li {
+  padding: 20px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  font-weight: bold;
+}
+header > ol > li > a {
+  text-decoration: none;
+  color: #000;
+}
+header > ol > li:hover,
+header > ol > li:active {
+  border-left: 4px solid #ff0000;
+  color: #1e90ff;
+}
+
+header > ol > li:last-child {
+  border-bottom: none;
+}
+
+/* ===== CORPO  HOME ===== */
+main {
+  width: 80%;
+  background-color: #f5f5f5;
+}
+
+main h1 {
+  padding: 50px 0px;
+  font-size: 45px;
+}
+
+.section-geral {
+  padding: 0px 20px;
+}
+.section-geral > h1 {
+  color: #0000cd;
+}
+main .quem-sou-eu > strong {
+  line-height: 40px;
+  margin-right: 50px;
+  padding: 50px;
+  text-align: center;
+  color: #696969;
+}
+
+/* ===== CORPO  CURSOS ===== */
+
+.desc-cursos {
+  padding: 30px 0px;
+  border-bottom: 1px solid #d3d3d3;
+  line-height: 30px;
+}
+
+.desc-cursos:last-child {
+  border: none;
+}
+.desc-cursos h2 {
+  padding-bottom: 10px;
+  color: #1e90ff;
+}
+.desc-cursos h3 {
+  color: #696969;
+}
+.icon-curso {
+  display: flex;
+}
+.icon-curso i {
+  width: 40px;
+
+  font-size: 1.6em;
+  color: #483d8b;
+}
+.nome-curso {
+  display: flex;
+}
+
+.fa-book {
+  padding-right: 20px;
+  bottom: -20px;
+  width: 50px;
+}
+
+/* ===== CORPO  PROJETOS ===== */
+.projetos {
+  padding-left: 20px;
+}
+.all-projects {
+  display: flex;
+  justify-content: center;
+}
+.all-projects img {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+}
+
+.desc-projetos {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #d3d3d3;
+}
+
+.desc-projetos:last-child {
+  border: none;
+}
+
+.desc-projetos > h3 {
+  padding: 10px 0;
+  color: #1e90ff;
+}
+
+.desc-projetos > h4 {
+  color: #696969;
+  padding-bottom: 10px;
+}
+
+.desc-projetos > ul {
+  font-weight: bold;
+}
+
+/* ===== CORPO  PROJETOS ===== */
+
+.contatos ul i {
+  width: 40px;
+  font-size: 1.7em;
+  color: #1e90ff;
+  margin-right: 10px;
+}
+
+.contatos ul li {
+  padding: 10px;
+  font-size: 1.2em;
+  color: #696969;
+}
+
+.format-contact {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.format-contact form {
+  margin-right: 50px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+form > label {
+  margin-bottom: 30px;
+  color: #1e90ff;
+}
+
+form > label > input {
+  height: 30px;
+  width: 300px;
+  border: 1px solid #1e90ff;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+
+form > label > input:focus {
+  box-shadow: inset 1px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+textarea {
+  min-width: 250px;
+  max-width: 250px;
+  max-height: 200px;
+  border: 1px solid #1e90ff;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.desc-habilidades {
+  margin-bottom: 40px;
+}
+
+.desc-habilidades i {
+  width: 40px;
+  font-size: 1.4em;
+  color: #a020f0;
+  margin-right: 10px;
+}
+
+.desc-habilidades > h2 {
+  color: #1e90ff;
+}
+
+.desc-habilidades > strong {
+  color: #696969;
+}
