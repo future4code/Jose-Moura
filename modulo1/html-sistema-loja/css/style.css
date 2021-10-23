@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	width: 100%;
+	max-width: 1140px;
+    height: 100px;
+    margin: auto;
+	text-align: center;
+	color: #00BFFF;
+}
+.nome-loja{
+	padding-left: 20px;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.nome-loja em{
+	color:#0000CD;
+}
+.nome-loja h1{
+	margin-bottom: 10px;
+}
+.menu-inicial{
+	margin-bottom: 120px;
+}
+.menu-inicial a{
+	padding: 10px;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	background-color: #4682B4;
+	color: #fff;
+	font-weight: 500;
+	font-size: 0.9em;
+}
+.descricao{
+	font-size: 3em;
+	color: #0000CD;
+}
+.rodape{
+	margin-top: 150px;
+}
+.icons{
+	margin-top: 20px
+}
+.icons img{
+	width: 70px;
+	padding-left: 30px;
+}
+
+
+/* */
+.menu-func{
+	margin-bottom: 60px;
+
+}
+.h2{
+	font-size: 2.5em;
+	margin-bottom: 50px;
+}
+table {
+	margin: auto;
+	font-size: 0.9em;
+}
+
+table, th, td{
+	border: 1px solid #96D4D4;
+	border-collapse: collapse;
+	color: #000;
+}
+table th{
+	padding: 5px 10px;
+	background-color: #ADD8E6;
+}
+table td{
+	padding: 5px 10px;
+	border: 1px solid #96D4D4;
+	
+}
+
+
+
+/* */
+.menu-estoque{
+	margin-bottom: 60px;
+}
+table, td, img{
+	width: 100px;
+	padding: 2px;
+}
+
+
+/* */ 
+form{
+	align-items: center;
+	text-align: center;
+}
+.add-produto{
+	margin-bottom: 20px;
+}
+.add-produto label{
+color:#4682B4;
+text-align: left;
+align-items: left;
+}
+.add-produto input{
+	border: 1px solid #96D4D4;
+	border-radius: 7px;
+	height: 30px;
+	
+}
+
+.form-add{
+	margin-top: 50px;
+}
+.form-add button{
+	padding: 10px 30px;
+	border-radius: 10px;
+	border: none;
+	background-color: #00BFFF;
+	font-size: 1.1em;
+	color: #fff;
+	font-weight: 500;
+}
