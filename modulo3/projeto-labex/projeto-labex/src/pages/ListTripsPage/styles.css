@@ -1,0 +1,16 @@
+.lista-corpo{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    color: red;
+}
+.container-viagens{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
