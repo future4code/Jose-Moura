@@ -1,0 +1,30 @@
+.corpo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo-labex{
+    font-size: 30px;
+}
+.x{
+    font-size: 75px;
+    color: red;
+    font-weight: lighter;
+    font-style: italic;
+}
+.corpo-detalhes{
+    display: flex;
+}
+.corpo-detalhes > div > h2{
+    text-align: center;
+}
+.text-detalhes > p > strong{
+    padding-right: 10px;
+}
+.candidates{
+    display: flex;
+    flex-direction: space-between;
+}
+.pendentes{
+    margin-right: 80px;
+}

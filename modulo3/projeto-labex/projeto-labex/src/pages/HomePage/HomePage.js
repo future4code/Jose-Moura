@@ -8,7 +8,7 @@ export const HomePage = () => {
         navegacao("/trips/list");
     }
     const goToAdminHomePage = () => {
-        navegacao("/admin/trips/list")
+        navegacao("/login")
     }
 
     return(

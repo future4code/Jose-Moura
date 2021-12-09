@@ -17,11 +17,12 @@ export const ListTripsPage = () => {
         .get(`${baseUrl}/trips`)
         .then((res) => {
             setListTrips(res.data.trips);
+            console.log(res.data.trips)
         })
         .catch((err) => {
             console.log(err);
-          },[]);
-    })
+          });
+    },[])
 
     return(
 
