@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
+
 import {useNavigate} from "react-router-dom"
 import {baseUrl} from "../../constants/index";
 import axios from "axios";
-import "./styles.css";
+import "./styledTrips.css";
 
 export const ListTripsPage = () => {
     const [listTrips,setListTrips] = useState([])
@@ -11,13 +12,15 @@ export const ListTripsPage = () => {
     const goToHomePage = () => {
         Navegacao("/");
     }
+    const goToinscricao = () => {
+        Navegacao("/trips/application");
+    }
 
     useEffect(() => {
         axios
         .get(`${baseUrl}/trips`)
         .then((res) => {
             setListTrips(res.data.trips);
-            console.log(res.data.trips)
         })
         .catch((err) => {
             console.log(err);
@@ -25,13 +28,15 @@ export const ListTripsPage = () => {
     },[])
 
     return(
-
         <div className="lista-corpo">
-            <div>
+            <div className="logot">
                 <h1>LABE<strong>X</strong></h1>
             </div>
-            <h2>LISTA DE VIAGENS</h2>
-            <div>
+            <div className="botao">
+            <button className="butons" onClick={goToHomePage}>HOME</button>
+            <button className="butons" onClick={goToinscricao}>INSCREVER-SE</button>
+            </div>
+            <div className="corpo-lista">
                 <div>
                     <p>
                     {listTrips.map((trips) => {
@@ -48,7 +53,7 @@ export const ListTripsPage = () => {
                     </p>
                 </div>
                 <div>
-                    <button onClick={goToHomePage}>HOME</button>
+                    
                 </div>
             </div>
         </div>

@@ -2,29 +2,49 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: #FFFFE0;
+    height: 695px;
 }
 .titulo-labex{
-    font-size: 30px;
+    font-size: 50px;
 }
 .x{
-    font-size: 75px;
+    font-size: 120px;
     color: red;
     font-weight: lighter;
     font-style: italic;
 }
 .corpo-detalhes{
     display: flex;
+    border-radius: 20px;
+    background: #fff;
+    width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+
 }
 .corpo-detalhes > div > h2{
     text-align: center;
+    width: 600px;
 }
-.text-detalhes > p > strong{
-    padding-right: 10px;
+.text-detalhes{
+    text-align: center;
 }
 .candidates{
     display: flex;
-    flex-direction: space-between;
 }
 .pendentes{
     margin-right: 80px;
+    background: #FFA500;
+    padding: 10px 5px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+.aprovados{
+    background: #32CD32;
+    padding: 10px 5px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
 }

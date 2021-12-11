@@ -2,12 +2,16 @@ import React,{useEffect,useState} from "react";
 import axios from "axios";
 import { baseUrl} from "../../constants";
 import "./styled.css"
+import {useNavigate, useParams} from "react-router-dom"
 
 
 export const TripDetailsPage = () => {
     const [tripDetails, setTripDetails] = useState({})
     const [aproved, setAproved] = useState([])
     const [pendents,setPendents] = useState([]);
+
+    //Recuperando o ID das viagens
+    const params = useParams();
 
     //Requisição para retornar os detalhes
     const pegaDetalhes = () =>{
@@ -19,7 +23,7 @@ export const TripDetailsPage = () => {
         }   
         }
         axios
-        .get(`${baseUrl}/trip/ubxBSypYPoymHFHJPzXq`,axiosConfig)
+        .get(`${baseUrl}/trip/${params.id}`,axiosConfig)
         .then((res) => {
             setTripDetails(res.data.trip);
             setAproved(res.data.trip.approved);

@@ -1,11 +1,14 @@
 import axios from "axios";
 import React,{useEffect, useState} from "react";
 import { baseUrl} from "../../constants";
+import {useNavigate} from "react-router-dom"
+import "./styledLogin.css"
 
 export const LoginPage = () => {
     const [email,setEmail] = useState("");
     const [senha,setSenha] = useState("");
 
+    const navegacao = useNavigate();
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -32,7 +35,7 @@ export const LoginPage = () => {
             setEmail(email);
             setSenha(senha);
             localStorage.setItem("token",res.data.token)
-            console.log(res.data);
+            navegacao("/admin/trips/list");
         }).catch((err) => {
             console.log(err)
         })
@@ -44,28 +47,27 @@ export const LoginPage = () => {
     },[])
 
     return(
-        <div>
-            <div>
+        <div className="corpo-login">
+            <div className="logoLogin">
                 <h1>LABE<strong>X</strong></h1>
             </div>
             <div>
-            <h1>PÁGINA DE LOGIN</h1>
             </div>
             <input 
+                className="camposl"
                 placeholder = "E-mail"
                 type="text"
                 value={email}
                 onChange={handleEmailChange}
             />
             < input 
+                className="camposl"
                 placeholder = "Senha"
                 type = "password"
                 value = {senha}
                 onChange={handleSenhaChange}
             />
-            <button onClick={handleLoginUser}>ENTRAR</button>
-
-            <p>{senha}</p>
+            <button className="botaoentrar"onClick={handleLoginUser}>ENTRAR</button>
         </div>
     )
 

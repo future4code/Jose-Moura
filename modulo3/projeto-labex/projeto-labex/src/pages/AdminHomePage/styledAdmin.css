@@ -1,0 +1,38 @@
+.corpoadmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFE0;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&display=swap');
+}
+
+.buttonAdmin{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+.buttonAdmin > button{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+.listacidade{
+    display: flex;
+    flex-direction: column;
+}
+.orgcity{
+    display: flex;
+}
+.orgcityp{
+    padding: 20px;
+}
+.container-botao{
+    padding: -20px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    margin-left: -50px;
+    margin-top: -20px;
+}
