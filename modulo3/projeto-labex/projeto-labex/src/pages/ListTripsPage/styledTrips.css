@@ -1,0 +1,46 @@
+.lista-corpo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FFFFE0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 700px;
+}
+.logot{
+    font-size: 50px;
+}
+.logot > h1 > strong{
+    font-size: 120px;
+    color: red;
+    font-weight: lighter;
+    font-style: italic;
+}
+.container-viagens{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #fff;
+    
+}
+.botao{
+    display: flex;
+    margin-top: -50px;
+}
+.butons{
+    margin-right: 100px;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.corpo-lista{
+    
+}
