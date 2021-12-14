@@ -1,0 +1,37 @@
+.corpo-creat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFE0;
+}
+.logocreat{
+    font-size: 50px;
+}
+.logocreat > h1 > strong{
+    font-size: 120px;
+    color: red;
+    font-weight: lighter;
+    font-style: italic;
+}
+.formularioTrip{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+.camposForm{
+    padding: 10px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.bottonsCreat{
+    display: flex;
+    justify-content: space-around;
+}
+.bottons{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    background:#FFC0CB;
+    cursor: pointer;
+}
