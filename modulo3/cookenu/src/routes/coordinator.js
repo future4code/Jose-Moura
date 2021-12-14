@@ -11,5 +11,5 @@ export const goToSignUp = (history) => {
     history.push("/cadastro")
 }
 export const goToRecipeDetail = (history) => {
-    history.push(`/detalhe/${id}`)
+    history.push(`/detalhe/`)
 }

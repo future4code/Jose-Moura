@@ -6,10 +6,12 @@ import RecipeListPage from "../pages/RecipeListPage/RecipeListPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import { BrowserRouter,Switch, Route } from "react-router-dom";
+import Header from "../components/Header/Header";
 
 const Router = () => {
     return(
         <BrowserRouter>
+            <Header />
             <Switch>
                 <Route exact path="/adicionar-receita">
                     <AddRecipePage />
