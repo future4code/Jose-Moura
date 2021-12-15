@@ -2,7 +2,7 @@ export const goToLogin = (history) => {
     history.push("/login")
 }
 export const goToAddRecipes = (history) => {
-    history.push("/adiconar-receita")
+    history.push("/adicionar-receita")
 }
 export const goToRecipeList = (history) => {
     history.push("/")

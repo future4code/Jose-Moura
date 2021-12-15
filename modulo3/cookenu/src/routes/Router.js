@@ -5,34 +5,30 @@ import RecipeDetailPage from "../pages/RecipeDetailPage/RecipeDetailPage";
 import RecipeListPage from "../pages/RecipeListPage/RecipeListPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import { BrowserRouter,Switch, Route } from "react-router-dom";
-import Header from "../components/Header/Header";
+import { Switch, Route } from "react-router-dom";
 
-const Router = () => {
+const Router = ({setRightButtonText}) => {
     return(
-        <BrowserRouter>
-            <Header />
             <Switch>
                 <Route exact path="/adicionar-receita">
                     <AddRecipePage />
                 </Route >
                 <Route exact path="/login">
-                    <LoginPage />
-                </Route>
-                <Route exact path="/">
-                    <RecipeDetailPage />
+                    <LoginPage setRightButtonText={setRightButtonText}/>
                 </Route>
                 <Route exact path="/detalhe/:id">
+                    <RecipeDetailPage />
+                </Route>
+                <Route exact path="/">
                     <RecipeListPage />
                 </Route>
                 <Route exact path="/cadastro">
-                    <SignUpPage />
+                    <SignUpPage setRightButtonText={setRightButtonText}/>
                 </Route>
-                <Route exact path="/login">
+                <Route>
                     <ErrorPage />
                 </Route>
             </Switch>
-        </BrowserRouter>
     )
 }
 

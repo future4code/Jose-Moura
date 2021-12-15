@@ -14,3 +14,16 @@ export const LogoImg = styled.img`
 export const InputContainer = styled.div`
 
 `
+export const LoginForm = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 450px;
+    align-items: center;
+    margin-bottom: 20px;
+`
+export const SignUpButton = styled.div`
+    width: 80vw;
+    max-width: 450px;
+    margin-top: 10px
+`
