@@ -12,15 +12,15 @@ const Router = ({setRightButtonText}) => {
             <Switch>
                 <Route exact path="/adicionar-receita">
                     <AddRecipePage />
-                </Route >
+                </Route>
                 <Route exact path="/login">
                     <LoginPage setRightButtonText={setRightButtonText}/>
                 </Route>
-                <Route exact path="/detalhe/:id">
-                    <RecipeDetailPage />
-                </Route>
                 <Route exact path="/">
                     <RecipeListPage />
+                </Route >
+                <Route exact path="/detalhe/:id">
+                    <RecipeDetailPage />
                 </Route>
                 <Route exact path="/cadastro">
                     <SignUpPage setRightButtonText={setRightButtonText}/>

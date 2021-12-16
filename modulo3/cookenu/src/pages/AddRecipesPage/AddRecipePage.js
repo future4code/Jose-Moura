@@ -2,7 +2,7 @@ import React from "react";
 import useProtectedPage from "../../hooks/useProtectedPage";
 
 const AddRecipePage = () => {
-    useProtectedPage();
+    //useProtectedPage();
     return(
         <div>
             Adicionar Receitas

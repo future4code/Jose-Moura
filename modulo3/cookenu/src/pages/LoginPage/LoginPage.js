@@ -8,7 +8,7 @@ import {goToSignUp} from "../../routes/coordinator";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 const LoginPage = ({setRightButtonText}) => {
-    useUnprotectedPage()
+    //useUnprotectedPage()
     const history = useHistory()
     return(
         <ScreenCointainer>

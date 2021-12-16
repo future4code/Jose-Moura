@@ -7,6 +7,7 @@ export const login = (body, clear, setRightButtonText, history, setIsLoading) =>
         .post(`${BASE_URL}/user/login`,body)
         .then((res)=>{
             localStorage.setItem("token", res.data.token)
+            alert(res.data.message)
             clear()
             setIsLoading(false)
             goToRecipeList(history)
@@ -14,7 +15,7 @@ export const login = (body, clear, setRightButtonText, history, setIsLoading) =>
         })
         .catch((err) => {
             setIsLoading(false)
-            alert(err.response.data.message)
+            alert(err)
         })
 }
 export const signUp = (body, clear, history, setRightButtonText, setIsLoading) => {
@@ -23,6 +24,7 @@ export const signUp = (body, clear, history, setRightButtonText, setIsLoading) =
     .post(`${BASE_URL}/user/signup`, body)
     .then((res) => {
         localStorage.setItem("token", res.data.token)
+        console.log(res.data)
         clear();
         setIsLoading(false);
         goToRecipeList(history);

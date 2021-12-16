@@ -1,6 +1,6 @@
 import React from "react";
 import useProtectedPage from "../../hooks/useProtectedPage";
-import RecipeCard from "../../components/RecipeCard/RecipeCard"
+import RecipeCard from "../../components/RecipeCard/RecipeCard";
 import { RecipeListContainer, AddRecipeButton } from './styled'
 import useRequestData from '../../hooks/useRequestData'
 import { BASE_URL } from '../../constants/urls'
@@ -10,9 +10,10 @@ import { goToAddRecipes, goToRecipeDetail } from '../../routes/coordinator'
 import Loading from "../../components/Loading/Loading"
 
 const RecipeListPage = () => {
-    useProtectedPage();
+    //useProtectedPage();
   const history = useHistory()
   const recipes = useRequestData([], `${BASE_URL}/recipe/feed`)
+  console.log(recipes)
 
   const onClickCard = (id) => {
     goToRecipeDetail(history, id)
