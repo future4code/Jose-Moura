@@ -10,6 +10,6 @@ export const goToRecipeList = (history) => {
 export const goToSignUp = (history) => {
     history.push("/cadastro")
 }
-export const goToRecipeDetail = (history) => {
-    history.push(`/detalhe/`)
+export const goToRecipeDetail = (history, id) => {
+    history.push(`/detalhe/${id}`)
 }
