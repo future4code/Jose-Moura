@@ -1,13 +1,9 @@
-import AllPlaylist from "./pages/AllPlaylist";
-import CreatePlaylist from "./pages/CreatePlaylist"
+import Router from "./routes/Router"
 
 function App() {
   return (
-    <div>
-      
-      <CreatePlaylist />
-      <AllPlaylist />
-    </div>
+
+      <Router />
   );
 }
 

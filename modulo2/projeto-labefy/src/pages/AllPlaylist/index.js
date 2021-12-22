@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import { BASE_URL } from "../../constants/urls";
+import { BASE_URL, axiosConfig } from "../../constants/urls";
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const AllPlaylist = () => {
@@ -8,14 +8,10 @@ const AllPlaylist = () => {
 
     const getAllPlaylist = () => {
         axios
-        .get(`${BASE_URL}/playlists`,{
-            headers: {
-                Authorization: "jose-moura-carver"
-              }
-        }) 
+        .get(`${BASE_URL}/playlists`,axiosConfig) 
         .then((res) => {
             setPlaylist(res.data.result.list);
-            console.log(res.data.result.list);
+            console.log(res.data.result.list)
         })
         .catch((err) => {
             console.log(err)
@@ -26,17 +22,11 @@ const AllPlaylist = () => {
     },[]);
 
     const deletePlaylist = (id) => {
-        const axiosConfig = {
-            headers: {
-                Authorization: "jose-moura-carver"
-              }
-        }
-
         axios
         .delete(`${BASE_URL}/playlists/${id}`,axiosConfig)
         .then((res) => {
             getAllPlaylist()
-            console.log("RODANDO COM SUCESSO")
+            
         })
         .catch((err) => {
             console.log(err)

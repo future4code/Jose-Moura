@@ -2,7 +2,17 @@ import React, {useState} from "react";
 import axios from "axios";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { BASE_URL } from "../../constants/urls";
+import { BASE_URL, axiosConfig} from "../../constants/urls";
+import {CreateContainer, NamePlaylist} from "./styled";
+import {createTheme } from '@mui/system';
+
+const theme = createTheme({
+    palette: {
+      border: {
+        paper: "#fff",
+      },
+    }
+})
 
 const CreatePlaylist = () => {
     const [playlist, setPlaylist] = useState("");
@@ -11,11 +21,6 @@ const CreatePlaylist = () => {
     }
 
     const criarPlaylists = () => {
-        const axiosConfig = {
-            headers: {
-                Authorization: "jose-moura-carver"
-              }
-        }
         const body = {
             "name": playlist
         }
@@ -31,17 +36,29 @@ const CreatePlaylist = () => {
     }
 
     return(
-        <div>
+        <CreateContainer>
+            <NamePlaylist theme={theme}>
             <TextField 
-            id="outlined-basic" 
-            label="Playlist" 
-            variant="outlined" 
-            type="text"
-            value={playlist}
-            onChange={handlePlaylistChange}
-            />
-            <Button variant="contained" onClick={() => {criarPlaylists()}}>CRIAR PLAYLIST</Button>
-        </div>
+                sx={{ 
+                color: 'border.paper',
+                borderRadius: 2,
+                width: 300,
+                mr: 1 }}
+                id="outlined-basic" 
+                label="Playlist" 
+                variant="outlined" 
+                type="text"
+                value={playlist}
+                onChange={handlePlaylistChange}
+             />
+                <Button variant="contained" 
+                    sx={{ ml: 2 }}
+                    sx={{ width: 150 }} 
+                    sx={{ height: (theme) => theme.spacing(6) }} 
+                    onClick={() => {criarPlaylists()}}>CRIAR PLAYLIST
+                </Button>
+                </NamePlaylist>
+        </CreateContainer>
     )
 }
 
