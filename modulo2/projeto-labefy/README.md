@@ -23,4 +23,4 @@ Projeto site de música. Nele é possível criar e excluir playlist. Adicionar e
 <hr/>
 
 ## `Link para acessar Labefy`<br/>
-[Labefy]()
+[Labefy](https://slim-uncle.surge.sh/)

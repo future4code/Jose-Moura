@@ -20,6 +20,7 @@ const ListTracks = () => {
     const [tracks, setTracks] = useState([]);
     const params = useParams()
 
+    
     const exibirTracks = () => {
         axios
         .get(`${BASE_URL}/playlists/${params.id}/tracks`,axiosConfig)
