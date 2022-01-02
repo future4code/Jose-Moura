@@ -4,15 +4,8 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { BASE_URL, axiosConfig} from "../../constants/urls";
 import {CreateContainer, NamePlaylist} from "./styled";
-import {createTheme } from '@mui/system';
+import {useParams} from "react-router-dom";
 
-const theme = createTheme({
-    palette: {
-      border: {
-        paper: "#fff",
-      },
-    }
-})
 
 const CreatePlaylist = () => {
     const [playlist, setPlaylist] = useState("");
@@ -29,6 +22,7 @@ const CreatePlaylist = () => {
         .post(`${BASE_URL}/playlists`, body, axiosConfig)
         .then((res) => {
             setPlaylist(playlist)
+            alert(`Playlist ${playlist} criada com sucesso!`)
         })
         .catch((err) => {
             console.log(err)
@@ -37,7 +31,7 @@ const CreatePlaylist = () => {
 
     return(
         <CreateContainer>
-            <NamePlaylist theme={theme}>
+            <NamePlaylist>
             <TextField 
                 sx={{ 
                 color: 'border.paper',
@@ -52,9 +46,10 @@ const CreatePlaylist = () => {
                 onChange={handlePlaylistChange}
              />
                 <Button variant="contained" 
-                    sx={{ ml: 2 }}
-                    sx={{ width: 150 }} 
-                    sx={{ height: (theme) => theme.spacing(6) }} 
+                    sx={{ ml: 2,
+                        width: 150,
+                    height: (theme) => theme.spacing(6) 
+                }} 
                     onClick={() => {criarPlaylists()}}>CRIAR PLAYLIST
                 </Button>
                 </NamePlaylist>

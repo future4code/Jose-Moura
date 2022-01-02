@@ -11,7 +11,7 @@ export const CreateContainer = styled.div`
 `
 export const NamePlaylist = styled.div`
     width: 100%;
-    height: 710px;
+    height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,9 +3,8 @@ import {primaryColor, neutralColor} from "./colors"
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: primaryColor,
-      contrastText: "white"
+    primary: blue,
+    secondary: white,
     },
     border:{
       playlist: '#8B008B'
@@ -14,6 +13,6 @@ const theme = createMuiTheme({
         primary: neutralColor
     }
   }
-})
+)
 
 export default theme 

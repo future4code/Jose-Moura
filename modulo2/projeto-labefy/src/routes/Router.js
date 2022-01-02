@@ -11,7 +11,7 @@ const Router = () => {
             <Routes>
                 <Route exact path={"/"} element={<CreatePlaylist />} />
                 <Route exact path={"/playlists"} element={<AllPlaylist />} />
-                <Route exact path={"/addtracks"} element={<AddTrack />} />
+                <Route exact path={"/addtracks/:id"} element={<AddTrack />} />
             </Routes>
         </BrowserRouter>
     )
