@@ -1,6 +1,6 @@
 import express,{Request,Response} from "express";
 import cors from "cors";
-import {listAfazeres} from "./data";
+import {listAfazeres, Afazeres} from "./data";
 
 const app = express();
 
@@ -23,17 +23,19 @@ app.get("/", (req:Request, res:Response) => {
 
 //Inserir uma nova tarefa
 app.post("/afazer", (req:Request, res:Response):any => {
-    for(let i = 0; i < listAfazeres.length; i++){
-        listAfazeres[i].afazer.push({
-                userId: 4,
-                id:1,
-                title:"estudar backend",
-                completed: true
-            })
-    }
-    res.send({listAfazeres});
-})
+    const userId =  req.body.userId;
+    const title = req.body.title;
 
+    const newTodo:Afazeres = {
+        userId,
+        id: Date.now(),
+        title,
+        completed: true
+    }
+    listAfazeres.push(newTodo);
+    res.send(listAfazeres);
+})
 app.listen(3033, () => {
     console.log("Rodando na porta 3033");
-});
+})
+
