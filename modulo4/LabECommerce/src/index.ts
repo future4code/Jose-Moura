@@ -6,6 +6,7 @@ import { allUsers } from "./endpoints/allUsers";
 import { createProduct } from "./endpoints/createProduct";
 import { allProducts } from "./endpoints/allProducts";
 import { createPurchase } from "./endpoints/createPurchase";
+import { allPurchases} from "./endpoints/allPurchases";
 
 dotenv.config();
 
@@ -23,6 +24,9 @@ app.post("/products", createProduct);
 //Mostrar toda a lista de clientes cadastrados no banco
 app.get("/products", allProducts);
 
+//Criar uma compra
 app.post("/purchases", createPurchase);
+//Buscando a compra de um usuario
+app.get("/users/:user_id/purchases", allPurchases);
 
 app.listen(process.env.PORT || 3003, () => console.log("RODANDO NA PORTA", process.env.PORT || 3003))
