@@ -1,0 +1,14 @@
+{
+  "name": "classes-encapsulamento",
+  "version": "1.0.0",
+  "description": "Classes e encapsulamento",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js"
+  },
+  "author": "José Moura",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  }
+}
